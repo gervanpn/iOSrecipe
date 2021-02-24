@@ -1,7 +1,6 @@
 //
 //  RecipesApp.swift
 //  Recipes
-//
 //  Created by Gervan Nantel on 2021-02-10.
 //
 
