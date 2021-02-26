@@ -10,7 +10,7 @@ struct SortGameView: View {
   //MARK: - Properties
   
   @State var input = NumbersOnly()
-  let numberList : Array<Int> = [10, 9, 8, 7, 5, 3, 2, 1, 4, 6]
+  let numberList : Array<Int> = [10, 9, 8, 7, 100, 5, 3, 2, 1, 4, 6, 1000]
   
   //MARK: - Body
     var body: some View {
