@@ -5,8 +5,8 @@
 //
 
 import SwiftUI
-import UIKit
-import Firebase
+//import UIKit
+//import Firebase
 
 @main
 struct RecipesApp: App {
@@ -22,11 +22,11 @@ struct RecipesApp: App {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
-      didFinishLaunchingWithOptions launchOptions:
-        [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      FirebaseApp.configure()
-      return true
-    }
+//    func application(_ application: UIApplication,
+//      didFinishLaunchingWithOptions launchOptions:
+//        [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//      FirebaseApp.configure()
+//      return true
+//    }
   }
 }

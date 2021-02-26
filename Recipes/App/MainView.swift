@@ -10,36 +10,51 @@ struct MainView: View {
     // MARK: - Properties
     
     var recipe: Recipe
+    @State var menuOpen: Bool = false
     
     //MARK: - Body
     var body: some View {
+      ZStack {
         TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-            
-            SignInView()
-                .tabItem {
-                    Image(systemName: "lock.fill")
-                    Text("Sign In")
-                }
-            
-            RecipeListView()
-                .tabItem {
-                    Image(systemName: "list.bullet")
-                    Text("Recipes")
-                }
-            
-            RecipeDetailView(recipe: recipeData[1])
-                .tabItem {
-                    Image(systemName: "ellipsis.circle.fill")
-                    Text("More")
-                }
-        }
-        .background(Color.white)//: TabView
+              HomeView()
+                  .tabItem {
+                      Image(systemName: "house.fill")
+                      Text("Home")
+                  }
+              
+              SignInView()
+                  .tabItem {
+                      Image(systemName: "lock.fill")
+                      Text("Sign In")
+                  }
+              
+              RecipeListView()
+                  .tabItem {
+                      Image(systemName: "list.bullet")
+                      Text("Recipes")
+                  }
+              
+              MenuLayoutView()
+                  .tabItem {
+                    if !self.menuOpen {
+                      Button(action: {
+                        self.openMenu()
+                      }, label: {
+                        Image(systemName: "ellipsis.circle.fill")
+                        Text("Sort")
+                      })
+                    }
+                      
+                  }
+          } //: TabView
+        .background(Color.white)
+      } //: ZStack
     }
+  
+  func openMenu() {
+      self.menuOpen.toggle()
+      }
+
 }
 
 struct MainView_Previews: PreviewProvider {
